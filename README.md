@@ -143,6 +143,8 @@ Note the `--publish-depends` input indicates that our GitHub sibling will depend
 datalad push --to github
 ```
 
+A great example of a datalad dataset shared through GitHub is the [Human Connectome Project Open Access](https://github.com/datalad-datasets/human-connectome-project-openaccess) dataset with more than a thousand subjects. The entire dataset is TBs large, but you can clone this entire repository in seconds, and `datalad get` the specific files you need.
+
 ## Creating sharable containers easily with [neurodocker](https://github.com/ReproNim/neurodocker)
 
 Often times, it is sufficient to provide an environment or requirements file with your project. However, there might be times when your analysis requires more than python packages. You may need to share a compiled software that cannot be installed by `conda` or `pip`. Or you are working on a high performance computing resource and you must build a container because the shared resource doesn't have anything installed. [Docker](https://docs.docker.com/engine/reference/builder/) and [Singularity](https://sylabs.io/guides/3.7/user-guide/definition_files.html) are powerful tools to help scientists containerize their softwares, but how do we create these containers with ease? 
